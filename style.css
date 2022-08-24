@@ -1,0 +1,231 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+ul {
+    padding: 0;
+
+}
+li {
+    font-weight: 700;
+    font-size: 1.2em;
+    list-style-type: none;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 0.2em;    
+}
+.dashboard-icon { 
+    padding: 0 25px;
+}
+
+/* colors */
+:root {
+--dark-blue: rgba(25,146,212,255);
+--grey: rgba(226,232,240,255);
+--orange: rgba(240,187,62,255)
+}
+
+.button-blue {
+    background-color: var(--dark-blue);
+    border : none;
+    color: white;
+    font-weight: 500;
+    font-size: 1.2em;
+    padding: 6px 12px;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 15px;
+
+}
+.container {
+    height: 100%;
+    display: grid;
+    grid: 
+    "sidebar main-header" 1fr
+    "sidebar main-content" 4.5fr
+    / 1fr 5.5fr;
+
+}
+/* SIDEBAR */
+.sidebar {
+    color: white;
+    background-color: var(--dark-blue);
+    grid-area: sidebar;
+    display: grid;
+    grid-template-rows: 100px 3fr 5fr ;
+}
+h1   {
+    display: flex; 
+    text-align: center;
+}
+.header {
+
+}
+.side-content {
+
+}
+/* HEADER */
+
+.main-header {
+    background-color: white;
+    grid-area: main-header;
+    display: grid;
+    grid: 
+    1fr 2fr
+    / 2fr 1fr;
+    padding: 1em;
+    
+}
+.search {
+    display: flex;
+    align-items: center;
+}
+.searchbar {
+    background-color: var(--grey);
+    border: none;
+    border-radius: 15px;
+    padding: 0.3em;
+    width: 450px;
+    margin : 0 1em 0 0;
+
+}
+.small-icon {
+    width: 24px;
+}
+.profile-buttons {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: start;
+    align-items: center;
+    gap: 2em;
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+.name {
+    font-size: 1.8em;
+    font-weight: 700;
+}
+.main-icon {
+    max-width: 70px;
+    display: grid;
+    justify-self: end;
+    padding : 1em;
+}
+.header-buttons {
+    display: flex;
+    align-items: center;
+   justify-content: end;
+   padding: 2em 3em;
+
+}
+.main-content {
+    background-color: var(--grey);
+    grid-area: main-content;
+    display: grid;
+    grid:
+    "projects announcements" 1fr
+    "projects trending" 1fr
+    / 3fr 1fr;
+    padding: 2em;
+    gap: 2em;
+   
+}
+.projects {
+    grid-area: projects;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+}
+.title {
+    font-weight: 900;
+    font-size: 1.2em;
+}
+.card-container {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+  
+}
+.card {
+    background-color: white;
+    padding: 1em 1.5em;
+    border-left: 6px solid var(--orange);
+    border-radius: 2%;
+    box-shadow:
+    0 6px 6px hsl(0deg 0% 0% / 0.3);
+}
+.card-title {
+    font-weight: 700;
+}
+.icon-bar {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: end;
+    gap: 0.8em;
+}
+.announcements {
+    grid-area: announcements;
+    display: grid;
+    grid-template-rows: 50px 1fr ;
+}
+.announcement {
+    background-color: white;
+    padding: 1em;
+    border-radius: 2%;
+    box-shadow:
+    0 6px 6px hsl(0deg 0% 0% / 0.3);
+    display: grid;
+    grid-template-rows: repeat(3, minmax(20px, 1fr));
+}
+
+.announce {
+    font-size: 0.8em;
+    margin: 0 20px;
+    padding : 1.4em;
+}
+
+.announcement .announce:not(:last-child) {
+    box-shadow: inset 0 -1px #DADECE;
+}
+
+
+    
+
+.trending {
+    grid-area: trending;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+}
+.profiles {
+    background-color: white;
+    padding: 0.5em;
+    border-radius: 2%;
+    box-shadow:
+    0 6px 6px hsl(0deg 0% 0% / 0.3);
+    display: grid;
+    grid-template-rows: repeat(4, minmax(10px, 1fr));
+}
+.user-icon {
+    max-width: 40px;
+    padding: 10px;
+}
+
+.user-profile {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+}
+.font700 {
+    font-weight: 700;
+}
+.weaktext {
+    color: grey;
+}
+    
